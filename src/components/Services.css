@@ -1,0 +1,50 @@
+/* src/components/Services.css */
+
+/* Container da seção */
+#services {
+  width: 95%;
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+/* Título */
+#services h2 {
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+}
+
+/* Grid responsivo dos cards */
+.services__grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* Estilo dos cards */
+.service__card {
+  background: var(--color-secondary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover no card */
+.service__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Título interno do card */
+.service__card h3 {
+  margin-bottom: 0.75rem;
+  color: var(--color-accent);
+}
+
+/* Texto dentro do card */
+.service__card p {
+  margin: 0.25rem 0;
+  color: var(--color-text);
+  font-size: 0.95rem;
+}

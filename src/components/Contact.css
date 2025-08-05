@@ -1,0 +1,67 @@
+/* Container */
+#contato {
+  width: 95%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: var(--color-secondary);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+#contato h2 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+/* Formulário */
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact__form input,
+.contact__form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.contact__form button {
+  padding: 0.75rem;
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.contact__form button:hover {
+  background: var(--color-accent);
+}
+
+/* Mensagens de status */
+.success {
+  color: green;
+  margin-top: 1rem;
+}
+.error {
+  color: red;
+  margin-top: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  #contato {
+    padding: 1rem;
+  }
+  .contact__form button {
+    font-size: 0.9rem;
+  }
+}

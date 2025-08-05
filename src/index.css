@@ -1,0 +1,130 @@
+:root {
+  --color-primary: #e07b39;    /* laranja bronze */
+  --color-secondary: #fff7e6;  /* bege claro */
+  --color-accent: #f5a623;     /* amarelo solar */
+  --color-text: #333333;       /* texto escuro */
+  --color-bg: #faf7f0;         /* fundo suave */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+/* Depois das variáveis e reset */
+section {
+  width: 95%;
+  max-width: 800px; /* não ultrapassa desktop */
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+
+
+
+h2 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+/* Garante que main centralize e seja fluido */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+
+@media (min-width: 768px) {
+  main {
+    padding: 4rem 2rem;
+  }
+}
+
+/* já está em index.css */
+.whatsapp-button {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--color-accent);
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  transition: transform 0.2s;
+}
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+
+/* responsividade */
+@media (min-width: 768px) {
+  main {
+    padding: 4rem 2rem;
+  }
+}
+
+#carousel {
+  max-width: 800px;    /* ajuste conforme desejar */
+  margin: 0 auto;
+}
+
+/* cada slide como elemento de fundo */
+.carousel-slide-bg {
+  height: 300px;               /* altura fixa do slide */
+  background-size: contain;    /* mostra a foto inteira */
+  background-position: center; /* centra o foco */
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+}
+
+:root {
+  --color-primary: #e07b39;    /* laranja bronze */
+  --color-secondary: #fff7e6;  /* bege claro */
+  --color-accent: #f5a623;     /* amarelo solar */
+  --color-text: #333333;       /* texto escuro */
+  --color-bg: #faf7f0;         /* fundo suave */
+}
+
+html {
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  html { font-size: 15px; }
+}
+@media (max-width: 480px) {
+  html { font-size: 14px; }
+}
+
+
+/* Espaço igual à altura do header para que o anchor não fique por baixo */
+section {
+  scroll-margin-top: 4rem; /* ajuste esse valor para a altura do seu header */
+}
+
+:root {
+  --header-height: 64px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  width: 95%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  scroll-margin-top: var(--header-height);
+}
