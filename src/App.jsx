@@ -23,7 +23,8 @@ function App() {
         <Contact/>
       </main>
       <Footer />
-        <InstagramButton url="https://www.instagram.com/poli_bronze?igsh=cjRiZ2Vtemhub3ox" />
+        <InstagramButton url="https://www.instagram.com/_poli_bronze?igsh=Mnp6bGplY25vNWI=" />
+
       <WhatsAppButton phone="559981164105" />
     </>
   )
