@@ -26,18 +26,7 @@
 .navbar__menu a:hover {
   color: var(--color-accent);
 }
-/* Mobile */
-@media (max-width: 600px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .navbar__menu {
-    width: 100%;
-    justify-content: space-around;
-    margin-top: 0.5rem;
-  }
-}
+
 
 
 
@@ -45,9 +34,7 @@
   color: var(--color-accent);
   font-weight: 600;
 }
-/* src/components/Navbar.css */
 
-/* LINK PADRÃO – cor branca */
 .navbar__menu a {
   margin-left: 1.5rem;
   text-decoration: none;
@@ -67,3 +54,28 @@
   font-weight: 600;
 }
 
+/* Desktop como está hoje */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .75rem 1rem;
+}
+
+/* Mobile: centraliza tudo */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar__logo {
+    margin: .25rem 0 .5rem;
+    height: 56px;
+  }
+  .navbar__menu {
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
