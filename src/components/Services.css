@@ -48,3 +48,10 @@
   color: var(--color-text);
   font-size: 0.95rem;
 }
+
+.service__price {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-accent);
+}

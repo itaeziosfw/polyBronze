@@ -46,25 +46,48 @@ main {
     padding: 4rem 2rem;
   }
 }
-
-/* já está em index.css */
-.whatsapp-button {
+/* Botões flutuantes sempre 100% redondos */
+.whatsapp-button,
+.instagram-button {
   position: fixed;
   bottom: 24px;
-  right: 24px;
-  background: var(--color-accent);
-  padding: 12px;
-  border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  color: var(--color-secondary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 64px;            /* trava largura */
+  height: 64px;           /* trava altura (igual à largura) */
+  /* alternativa moderna: aspect-ratio: 1 / 1; */
+  padding: 0;             /* sem padding para não ovalizar */
+  border-radius: 50%;     /* círculo perfeito */
+  background: var(--color-primary);
+  display: grid;
+  place-items: center;    /* centraliza o ícone */
+  box-shadow: 0 8px 20px rgba(0,0,0,.18);
   z-index: 200;
-  transition: transform 0.2s;
+  transition: transform .2s, background .2s;
 }
-.whatsapp-button:hover {
-  transform: scale(1.1);
+
+/* posições */
+.whatsapp-button { right: 24px; left: auto; }
+.instagram-button { left: 24px; right: auto; }
+
+.whatsapp-button:hover,
+.instagram-button:hover {
+  background: var(--color-accent);
+  transform: scale(1.06);
+}
+
+/* tamanho do ícone */
+.whatsapp-button svg,
+.instagram-button svg {
+  width: 28px;
+  height: 28px;
+  color: #fff;           /* ícone branco em cima do laranja */
+}
+
+/* Mobile: um pouco menores */
+@media (max-width: 480px) {
+  .whatsapp-button,
+  .instagram-button { width: 56px; height: 56px; }
+  .whatsapp-button svg,
+  .instagram-button svg { width: 24px; height: 24px; }
 }
 
 
@@ -83,8 +106,8 @@ main {
 /* cada slide como elemento de fundo */
 .carousel-slide-bg {
   height: 300px;               /* altura fixa do slide */
-  background-size: contain;    /* mostra a foto inteira */
-  background-position: center; /* centra o foco */
+  background-size: contain;    
+  background-position: center; 
   background-repeat: no-repeat;
   border-radius: 1rem;
 }

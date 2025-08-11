@@ -1,42 +1,43 @@
-.whatsapp-button {
+/* Botões flutuantes sempre 100% redondos */
+.whatsapp-button,
+.instagram-button {
   position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  width: 60px;
-  height: 60px;
-  background-color: #25D366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  z-index: 1000;
-}
-
-.whatsapp-button img {
-  width: 32px;      /* ajusta o tamanho do ícone */
-  height: 32px;
-  display: block;
-}
-
-.whatsapp-button {
   bottom: 24px;
-  right: 24px;
-  padding: 12px;
-}
-@media (max-width: 480px) {
-  .whatsapp-button {
-    bottom: 16px;
-    right: 16px;
-    padding: 8px;
-  }
+  width: 64px;            /* trava largura */
+  height: 64px;           /* trava altura (igual à largura) */
+  /* alternativa moderna: aspect-ratio: 1 / 1; */
+  padding: 0;             /* sem padding para não ovalizar */
+  border-radius: 50%;     /* círculo perfeito */
+  background: var(--color-primary);
+  display: grid;
+  place-items: center;    /* centraliza o ícone */
+  box-shadow: 0 8px 20px rgba(0,0,0,.18);
+  z-index: 200;
+  transition: transform .2s, background .2s;
 }
 
-footer {
-  width: 100%;
-  text-align: center;
-  padding: 1rem 0;
-  background: var(--color-secondary);
+/* posições */
+.whatsapp-button { right: 24px; left: auto; }
+.instagram-button { left: 24px; right: auto; }
+
+.whatsapp-button:hover,
+.instagram-button:hover {
+  background: var(--color-accent);
+  transform: scale(1.06);
+}
+
+/* tamanho do ícone */
+.whatsapp-button svg,
+.instagram-button svg {
+  width: 21px;
+  height: 21px;
+  color: #fff;           /* ícone branco em cima do laranja */
+}
+
+/* Mobile: um pouco menores */
+@media (max-width: 480px) {
+  .whatsapp-button,
+  .instagram-button { width: 56px; height: 56px; }
+  .whatsapp-button svg,
+  .instagram-button svg { width: 22px; height: 22px; }
 }

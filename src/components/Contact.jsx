@@ -8,7 +8,6 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
-    
     setStatus('SENDING');
 
     const data = new FormData(form);
